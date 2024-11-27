@@ -30,11 +30,24 @@ This extension creates a chat interface within VS Code that connects to a local 
 
 ## Development Setup
 
-The project uses the following key files:
-
+The project uses the following key file:
 - Main extension logic: `src/extension.ts`
-- Chatbot UI: `src/chatbot.html`
-- Chatbot styles: `src/styles.css`      
+- The chat interface is being created dynamically through the webview API in the `src/extension.ts` file:
+```typescript   
+		const panel = vscode.window.createWebviewPanel(
+			'ollamaChatbot',
+			'Ollama Chatbot',
+			vscode.ViewColumn.One,
+			{
+			  enableScripts: true,
+			  retainContextWhenHidden: true
+			}
+		  );
+	  
+		  panel.webview.html = getWebviewContent(models);
+
+```
+ 
 
 ## Usage
 
