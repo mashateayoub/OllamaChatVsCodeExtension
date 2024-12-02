@@ -6,6 +6,34 @@ A Visual Studio Code extension that integrates Ollama's AI models into VS Code t
 
 This extension creates a chat interface within VS Code that connects to a local Ollama instance, allowing developers to interact with AI models directly from their development environment. The extension is built as a web extension, making it compatible with VS Code for the Web.
 
+## Built With
+
+- **Node.js** 
+- **VS Code API** - The API used to create the Visual Studio Code extension.
+- **Ollama** - The AI models integrated into the chat interface.
+- **Svelte** 
+
+## Dependencies     
+
+Key dependencies as defined in package.json:   
+
+
+```json 
+  "dependencies": {
+    "@vscode/webview-ui-toolkit": "^1.4.0",
+    "buffer": "^6.0.3",
+    "marked": "^12.0.0",
+    "ollama-js-client": "^1.0.2",
+    "ollama-node": "^0.1.28",
+    "path-browserify": "^1.0.1",
+    "stream-http": "^3.2.0",
+    "svelte": "^5.2.9",
+    "svelte-loader": "^3.2.4",
+    "url": "^0.11.4"
+  }
+```
+
+
 ## Features
 
 - Interactive chat interface within VS Code
@@ -15,11 +43,6 @@ This extension creates a chat interface within VS Code that connects to a local 
 - Clean and intuitive UI 
 - Markdown rendering
 
-## Requirements
-
-- VS Code version 1.95.0 or higher (as specified in package.json)
-- Local Ollama instance running on port 11434
-- Node.js and npm installed
 
 ## Installation
 
@@ -76,21 +99,6 @@ The project uses the following key file:
 - `tsconfig.json`: TypeScript configuration
 - `.vscode/`: VS Code specific settings and launch configurations
 
-## Dependencies     
-
-Key dependencies as defined in package.json:   
-
-
-```json 
-  "dependencies": {
-    "buffer": "^6.0.3",
-    "ollama-js-client": "^1.0.2",
-    "ollama-node": "^0.1.28",
-    "path-browserify": "^1.0.1",
-    "stream-http": "^3.2.0",
-    "url": "^0.11.4"
-  }
-```
 
 
 ## License
