@@ -39,6 +39,7 @@ Key dependencies as defined in package.json:
 - Support for multiple models
 - Real-time message streaming
 - Markdown rendering
+- 
 
 ## Installation
 
