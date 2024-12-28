@@ -8,17 +8,16 @@ This extension creates a chat interface within VS Code that connects to a local 
 
 ## Built With
 
-- **Node.js** 
+- **Node.js**
 - **VS Code API** - The API used to create the Visual Studio Code extension.
 - **Ollama** - The AI models integrated into the chat interface.
-- **Svelte** 
+- **Svelte**
 
-## Dependencies     
+## Dependencies
 
-Key dependencies as defined in package.json:   
+Key dependencies as defined in package.json:
 
-
-```json 
+```json
   "dependencies": {
     "@vscode/webview-ui-toolkit": "^1.4.0",
     "buffer": "^6.0.3",
@@ -33,16 +32,13 @@ Key dependencies as defined in package.json:
   }
 ```
 
-
 ## Features
 
 - Interactive chat interface within VS Code
 - Connection to local Ollama instance
 - Support for multiple models
 - Real-time message streaming
-- Clean and intuitive UI 
 - Markdown rendering
-
 
 ## Installation
 
@@ -54,9 +50,11 @@ Key dependencies as defined in package.json:
 ## Development Setup
 
 The project uses the following key file:
+
 - Main extension logic: `src/extension.ts`
 - The chat interface is being created dynamically through the webview API in the `src/extension.ts` file:
-```typescript   
+
+```typescript
 		const panel = vscode.window.createWebviewPanel(
 			'ollamaChatbot',
 			'Ollama Chatbot',
@@ -70,15 +68,12 @@ The project uses the following key file:
 		  panel.webview.html = getWebviewContent(models);
 
 ```
- 
 
 ## Usage
 
 1. Launch the extension in VS Code using F5.
 2. The chat interface will be available in the VS Code sidebar.
-3. Interact with the chat interface to send messages to the Ollama instance and receive responses.  
-
-
+3. Interact with the chat interface to send messages to the Ollama instance and receive responses.
 
 ## Known Issues
 
@@ -98,8 +93,6 @@ The project uses the following key file:
 - `package.json`: Project dependencies and extension metadata
 - `tsconfig.json`: TypeScript configuration
 - `.vscode/`: VS Code specific settings and launch configurations
-
-
 
 ## License
 
